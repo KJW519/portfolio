@@ -43,18 +43,18 @@ const FixedFooter = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.border};
 `
 
-// const DragHandleArea = styled(motion.div)`
-//   position: sticky;
-//   top: 0;
-//   z-index: 5;
-//   width: 100%;
-//   padding: 0.75rem 0 0.5rem;
-//   display: flex;
-//   justify-content: center;
-//   background-color: #FFFFFF;
-//   cursor: grab;
-//   touch-action: none;
-// `
+const DragHandleArea = styled(motion.div)`
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  padding: 0.75rem 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
+  cursor: grab;
+  touch-action: none;
+`
 
 const DragHandle = styled.div`
   width: 40px;
@@ -79,9 +79,9 @@ const CloseButton = styled.button`
   z-index: 10;
 `
 
-// const Content = styled.div`
-//   padding: 0 1.25rem 2rem;
-// `
+const Content = styled.div`
+  padding: 0 1.25rem 2rem;
+`
 
 const Poster = styled.img`
   width: 100%;
