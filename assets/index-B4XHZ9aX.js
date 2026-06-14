@@ -134,19 +134,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   inset: 0;
   z-index: 200;
   background-color: rgba(0, 0, 0, 0.4);
-`,t_=F.p`
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #333333;
-  margin-bottom: 1rem;
-`,n_=F.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  font-size: 0.85rem;
-  color: #777777;
-  margin-top: 0.5rem;
-`,r_=F($g.div)`
+`,t_=F($g.div)`
   position: fixed;
   top: 0;
   left: 0;
@@ -158,11 +146,28 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+`,n_=F($g.div)`
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  padding: 0.75rem 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
+  cursor: grab;
+  touch-action: none;
+`,r_=F.div`
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #DDDDDD;
 `,i_=F.button`
   position: sticky;
   top: 0.75rem;
   align-self: flex-end;
   margin-right: 0.75rem;
+  margin-top: -2.5rem;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -172,50 +177,56 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
   cursor: pointer;
   z-index: 10;
 `,a_=F.div`
-  width: 40px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #DDDDDD;
-  margin: 0.75rem auto 0;
-`,o_=F.div`
   padding: 0 1.25rem 2rem;
-`,s_=F.img`
+`,o_=F.img`
   width: 100%;
   border-radius: 8px;
   margin-bottom: 1.5rem;
-`,c_=F.h2`
+`,s_=F.h2`
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-`,l_=F.p`
+`,c_=F.p`
   font-size: 0.85rem;
   color: #777777;
-`,u_=({project:e,onClose:t})=>(0,I.jsx)(oh,{children:e&&(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(e_,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:t},`overlay`),(0,I.jsxs)(r_,{initial:{y:`100%`},animate:{y:0},exit:{y:`100%`},transition:{type:`spring`,damping:30,stiffness:300},drag:`y`,dragConstraints:{top:0,bottom:0},dragElastic:{top:0,bottom:.5},onDragEnd:(e,n)=>{n.offset.y>150&&t()},children:[(0,I.jsx)(a_,{}),(0,I.jsx)(i_,{onClick:t,children:`✕`}),(0,I.jsxs)(o_,{children:[e.images.map((t,n)=>(0,I.jsx)(s_,{src:t,alt:`${e.title} ${n+1}`},n)),(0,I.jsx)(c_,{children:e.title}),(0,I.jsxs)(l_,{children:[e.category,` · `,e.year]}),(0,I.jsx)(t_,{children:e.description}),(0,I.jsxs)(n_,{children:[(0,I.jsxs)(`span`,{children:[`Tools: `,e.tools]}),(0,I.jsxs)(`span`,{children:[`Size: `,e.size]})]})]})]},`sheet`)]})}),d_=F.div`
+`,l_=F.p`
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-top: 1rem;
+`,u_=F.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: #777777;
+  margin-top: 0.75rem;
+`,d_=({project:e,onClose:t})=>(0,I.jsx)(oh,{children:e&&(0,I.jsxs)(I.Fragment,{children:[(0,I.jsx)(e_,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:t},`overlay`),(0,I.jsxs)(t_,{initial:{y:`100%`},animate:{y:0},exit:{y:`100%`},transition:{type:`spring`,damping:30,stiffness:300},children:[(0,I.jsx)(n_,{drag:`y`,dragConstraints:{top:0,bottom:0},dragElastic:{top:0,bottom:.5},onDragEnd:(e,n)=>{n.offset.y>100&&t()},children:(0,I.jsx)(r_,{})}),(0,I.jsx)(i_,{onClick:t,children:`✕`}),(0,I.jsxs)(a_,{children:[e.images.map((t,n)=>(0,I.jsx)(o_,{src:t,alt:`${e.title} ${n+1}`},n)),(0,I.jsx)(s_,{children:e.title}),(0,I.jsxs)(c_,{children:[e.category,` · `,e.year]}),(0,I.jsx)(l_,{children:e.description}),(0,I.jsxs)(u_,{children:[(0,I.jsxs)(`span`,{children:[`Tools: `,e.tools]}),(0,I.jsxs)(`span`,{children:[`Size: `,e.size]})]})]})]},`sheet`)]})}),f_=F.div`
   min-height: 100vh;
   padding: 5rem 1rem 2rem;
   background-color: #FFFFFF;
-`,f_=F.h1`
+`,p_=F.h1`
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
-`,p_=F.div`
+`,m_=F.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`,m_=F.div`
+`,h_=F.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   cursor: pointer;
-`,h_=F.img`
+`,g_=F.img`
   width: 100%;
   border-radius: 4px;
-`,g_=F.div`
+`,__=F.div`
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
   color: #777777;
-`,__=F.span`
+`,v_=F.span`
   font-weight: 600;
   color: #111111;
-`,v_=()=>{let[e,t]=(0,w.useState)(null);return(0,I.jsxs)(d_,{children:[(0,I.jsx)(f_,{children:`Work`}),(0,I.jsx)(p_,{children:Eo.map(e=>(0,I.jsxs)(m_,{onClick:()=>t(e),children:[(0,I.jsx)(h_,{src:e.images[0],alt:e.title}),(0,I.jsxs)(g_,{children:[(0,I.jsx)(__,{children:e.title}),(0,I.jsxs)(`span`,{children:[e.category,` · `,e.year]})]})]},e.id))}),(0,I.jsx)(u_,{project:e,onClose:()=>t(null)})]})},y_=()=>(0,I.jsx)(`div`,{children:`Home`}),b_=()=>(0,I.jsx)(`div`,{children:`Home`});function x_(){return(0,I.jsxs)(qa,{theme:lo,children:[(0,I.jsx)(uo,{}),(0,I.jsxs)(jn,{children:[(0,I.jsx)(R,{}),(0,I.jsxs)(Ut,{children:[(0,I.jsx)(Vt,{path:`/`,element:(0,I.jsx)(To,{})}),(0,I.jsx)(Vt,{path:`/work`,element:(0,I.jsx)(v_,{})}),(0,I.jsx)(Vt,{path:`/about`,element:(0,I.jsx)(y_,{})}),(0,I.jsx)(Vt,{path:`/contact`,element:(0,I.jsx)(b_,{})})]})]})]})}(0,oi.createRoot)(document.getElementById(`root`)).render((0,I.jsx)(w.StrictMode,{children:(0,I.jsx)(x_,{})}));
+`,y_=()=>{let[e,t]=(0,w.useState)(null);return(0,I.jsxs)(f_,{children:[(0,I.jsx)(p_,{children:`Work`}),(0,I.jsx)(m_,{children:Eo.map(e=>(0,I.jsxs)(h_,{onClick:()=>t(e),children:[(0,I.jsx)(g_,{src:e.images[0],alt:e.title}),(0,I.jsxs)(__,{children:[(0,I.jsx)(v_,{children:e.title}),(0,I.jsxs)(`span`,{children:[e.category,` · `,e.year]})]})]},e.id))}),(0,I.jsx)(d_,{project:e,onClose:()=>t(null)})]})},b_=()=>(0,I.jsx)(`div`,{children:`Home`}),x_=()=>(0,I.jsx)(`div`,{children:`Home`});function S_(){return(0,I.jsxs)(qa,{theme:lo,children:[(0,I.jsx)(uo,{}),(0,I.jsxs)(jn,{children:[(0,I.jsx)(R,{}),(0,I.jsxs)(Ut,{children:[(0,I.jsx)(Vt,{path:`/`,element:(0,I.jsx)(To,{})}),(0,I.jsx)(Vt,{path:`/work`,element:(0,I.jsx)(y_,{})}),(0,I.jsx)(Vt,{path:`/about`,element:(0,I.jsx)(b_,{})}),(0,I.jsx)(Vt,{path:`/contact`,element:(0,I.jsx)(x_,{})})]})]})]})}(0,oi.createRoot)(document.getElementById(`root`)).render((0,I.jsx)(w.StrictMode,{children:(0,I.jsx)(S_,{})}));
