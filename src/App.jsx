@@ -2,8 +2,8 @@ import { HashRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './styles/theme'
 import { GlobalStyle } from './styles/GlobalStyle'
+import Navbar from './components/layout/Navbar'
 
-// 페이지 (곧 만들 거예요)
 import Home from './pages/Home'
 import Work from './pages/Work'
 import About from './pages/About'
@@ -14,6 +14,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <HashRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
