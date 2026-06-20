@@ -60,7 +60,7 @@ const Title = styled.h1`
 const List = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: grid;
@@ -84,9 +84,18 @@ const ProjectItem = styled.div`
   }
 `
 
+const PosterWrapper = styled.div`
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+`
+
 const Poster = styled.img`
   width: 100%;
-  border-radius: 4px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 `
 
 const Info = styled.div`
@@ -119,7 +128,7 @@ const DetailMeta = styled.p`
 `
 
 const DetailDescription = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   line-height: 1.6;
   color: #333333;
   margin-top: 1rem;
@@ -163,7 +172,9 @@ const Work = () => {
               $active={activeProject?.id === project.id}
               onClick={() => handleClick(project)}
             >
-              <Poster src={project.images[0]} alt={project.title} />
+              <PosterWrapper>
+                <Poster src={project.images[0]} alt={project.title} />
+              </PosterWrapper>
               <Info>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <span>{project.category} · {project.year}</span>

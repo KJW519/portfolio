@@ -58,7 +58,6 @@ const Navbar = () => {
       </LeftGroup>
       <RightGroup>
         <NavItem to="/work">Work</NavItem>
-        <NavItem to="/about">About</NavItem>
         <NavItem to="/contact">Contact</NavItem>
       </RightGroup>
     </Nav>
